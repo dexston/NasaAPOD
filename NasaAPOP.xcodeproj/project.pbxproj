@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		586030117DA6EA0986D0107B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860396B013F81E1135D1116 /* DataModel.swift */; };
+		5860339199C80897A81DB52B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603458AADABCD557CA30E8 /* NetworkManager.swift */; };
+		586034DF1BB57954F60E54CE /* NasaAPOPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586030E93D11B2634718532E /* NasaAPOPApp.swift */; };
+		586037F6B064EB3C782EAB6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58603111EB2FC0181E557833 /* Preview Assets.xcassets */; };
+		586039D56E1BF9F88FD47615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5860312B8D415ABFF992F63E /* Assets.xcassets */; };
+		58603B65C13739C4ACD366F8 /* NasaAPOPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603E0806CA8BEEF26A2A92 /* NasaAPOPUITests.swift */; };
+		58603DB975973EC382116B99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586034E54022E20426E58E4A /* ContentView.swift */; };
+		58603E8238927E00B06725A3 /* NasaAPOPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603DAFAE4B15B57E8955C8 /* NasaAPOPTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		586034C6F42C01224DFCC014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5860334C43D33154D78ED631 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 586037A7A0C1CC4B659E9E05;
+			remoteInfo = NasaAPOP;
+		};
+		586038C6A575A61915F31223 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5860334C43D33154D78ED631 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 586037A7A0C1CC4B659E9E05;
+			remoteInfo = NasaAPOP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		586030E93D11B2634718532E /* NasaAPOPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPOPApp.swift; sourceTree = "<group>"; };
+		58603111EB2FC0181E557833 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5860312B8D415ABFF992F63E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58603458AADABCD557CA30E8 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		586034E54022E20426E58E4A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		586037709194BE03588C75D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		5860389B330BEA586EDA6C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		5860396B013F81E1135D1116 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		58603A94DF377BAF15E21489 /* NasaAPOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaAPOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58603DAFAE4B15B57E8955C8 /* NasaAPOPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPOPTests.swift; sourceTree = "<group>"; };
+		58603E0806CA8BEEF26A2A92 /* NasaAPOPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPOPUITests.swift; sourceTree = "<group>"; };
+		58603E647A7EB0EBB9F5CA80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		58603E8D54B76A79E6183D23 /* NasaAPOPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaAPOPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58603FE058D6C376044AEA2A /* NasaAPOPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NasaAPOPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		586035ECF744370AF09E985A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		586036167CB64512024F2C18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58603670C2E4E013F369C994 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5860310722E837C1ED99C6A3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				58603111EB2FC0181E557833 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5860336B359D66514B87F43C = {
+			isa = PBXGroup;
+			children = (
+				586037E3FDD8EBC845D991D4 /* Products */,
+				58603FE1309EF916CA1276D4 /* NasaAPOP */,
+				586037A8E1D8DA9B66B3AACD /* NasaAPOPTests */,
+				58603845E8247E7E6C23D027 /* NasaAPOPUITests */,
+			);
+			sourceTree = "<group>";
+		};
+		586037A8E1D8DA9B66B3AACD /* NasaAPOPTests */ = {
+			isa = PBXGroup;
+			children = (
+				5860389B330BEA586EDA6C14 /* Info.plist */,
+				58603DAFAE4B15B57E8955C8 /* NasaAPOPTests.swift */,
+			);
+			path = NasaAPOPTests;
+			sourceTree = "<group>";
+		};
+		586037BFC33B6261E59C0F8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				586034E54022E20426E58E4A /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		586037E3FDD8EBC845D991D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58603A94DF377BAF15E21489 /* NasaAPOP.app */,
+				58603FE058D6C376044AEA2A /* NasaAPOPTests.xctest */,
+				58603E8D54B76A79E6183D23 /* NasaAPOPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58603845E8247E7E6C23D027 /* NasaAPOPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				586037709194BE03588C75D8 /* Info.plist */,
+				58603E0806CA8BEEF26A2A92 /* NasaAPOPUITests.swift */,
+			);
+			path = NasaAPOPUITests;
+			sourceTree = "<group>";
+		};
+		58603EAA3DEB073A692F439B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5860396B013F81E1135D1116 /* DataModel.swift */,
+				58603458AADABCD557CA30E8 /* NetworkManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58603FE1309EF916CA1276D4 /* NasaAPOP */ = {
+			isa = PBXGroup;
+			children = (
+				58603E647A7EB0EBB9F5CA80 /* Info.plist */,
+				5860312B8D415ABFF992F63E /* Assets.xcassets */,
+				5860310722E837C1ED99C6A3 /* Preview Content */,
+				586030E93D11B2634718532E /* NasaAPOPApp.swift */,
+				58603EAA3DEB073A692F439B /* Model */,
+				586037BFC33B6261E59C0F8F /* View */,
+			);
+			path = NasaAPOP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5860340C8D6DF32D594FAF82 /* NasaAPOPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58603EE5A2313CD275E7E915 /* Build configuration list for PBXNativeTarget "NasaAPOPUITests" */;
+			buildPhases = (
+				586036AC1B19C49F16A1C8E9 /* Sources */,
+				586036167CB64512024F2C18 /* Frameworks */,
+				5860385CDD397FC8226D2D7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				586033E5E28D256049223AB8 /* PBXTargetDependency */,
+			);
+			name = NasaAPOPUITests;
+			productName = NasaAPOPUITests;
+			productReference = 58603E8D54B76A79E6183D23 /* NasaAPOPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		586037A7A0C1CC4B659E9E05 /* NasaAPOP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 586032D878842A6340847344 /* Build configuration list for PBXNativeTarget "NasaAPOP" */;
+			buildPhases = (
+				58603D79E960179B8CD952A5 /* Sources */,
+				586035ECF744370AF09E985A /* Frameworks */,
+				58603FB4BE80CEA611EF6C9E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NasaAPOP;
+			productName = NasaAPOP;
+			productReference = 58603A94DF377BAF15E21489 /* NasaAPOP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58603CAB76FD2DEFA215A53B /* NasaAPOPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58603CF90E8F38CD76805249 /* Build configuration list for PBXNativeTarget "NasaAPOPTests" */;
+			buildPhases = (
+				58603C7DAC82939BC6175A75 /* Sources */,
+				58603670C2E4E013F369C994 /* Frameworks */,
+				5860346CE655EFA7BE7A41D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5860370A9EC9F6FE3821BA13 /* PBXTargetDependency */,
+			);
+			name = NasaAPOPTests;
+			productName = NasaAPOPTests;
+			productReference = 58603FE058D6C376044AEA2A /* NasaAPOPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5860334C43D33154D78ED631 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 586034B03288EDC720D50088 /* Build configuration list for PBXProject "NasaAPOP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5860336B359D66514B87F43C;
+			productRefGroup = 586037E3FDD8EBC845D991D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				586037A7A0C1CC4B659E9E05 /* NasaAPOP */,
+				58603CAB76FD2DEFA215A53B /* NasaAPOPTests */,
+				5860340C8D6DF32D594FAF82 /* NasaAPOPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5860346CE655EFA7BE7A41D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5860385CDD397FC8226D2D7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58603FB4BE80CEA611EF6C9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586039D56E1BF9F88FD47615 /* Assets.xcassets in Resources */,
+				586037F6B064EB3C782EAB6F /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		586036AC1B19C49F16A1C8E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58603B65C13739C4ACD366F8 /* NasaAPOPUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58603C7DAC82939BC6175A75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58603E8238927E00B06725A3 /* NasaAPOPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58603D79E960179B8CD952A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				586034DF1BB57954F60E54CE /* NasaAPOPApp.swift in Sources */,
+				58603DB975973EC382116B99 /* ContentView.swift in Sources */,
+				586030117DA6EA0986D0107B /* DataModel.swift in Sources */,
+				5860339199C80897A81DB52B /* NetworkManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		586033E5E28D256049223AB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 586037A7A0C1CC4B659E9E05 /* NasaAPOP */;
+			targetProxy = 586038C6A575A61915F31223 /* PBXContainerItemProxy */;
+		};
+		5860370A9EC9F6FE3821BA13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 586037A7A0C1CC4B659E9E05 /* NasaAPOP */;
+			targetProxy = 586034C6F42C01224DFCC014 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5860326987A71AC33AF7BAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NasaAPOP.app/NasaAPOP";
+				INFOPLIST_FILE = NasaAPOPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dexston.NasaAPOPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		5860334A61A099723AE3425D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NasaAPOP.app/NasaAPOP";
+				INFOPLIST_FILE = NasaAPOPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dexston.NasaAPOPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		586033BE84553E4CC0AEC229 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				DEVELOPMENT_ASSET_PATHS = "\"NasaAPOP/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NasaAPOP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dexston.NasaAPOP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		586037838772E72674676250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				DEVELOPMENT_ASSET_PATHS = "\"NasaAPOP/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = NasaAPOP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dexston.NasaAPOP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		586037BE91FB9EE9851DA656 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NasaAPOPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dexston.NasaAPOPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NasaAPOP;
+			};
+			name = Debug;
+		};
+		58603AE47BCA63AF08F9C71B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58603C3D7CFC31EA44731589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = NasaAPOPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dexston.NasaAPOPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NasaAPOP;
+			};
+			name = Release;
+		};
+		58603F851238AB7BE589AA01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		586032D878842A6340847344 /* Build configuration list for PBXNativeTarget "NasaAPOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				586037838772E72674676250 /* Debug */,
+				586033BE84553E4CC0AEC229 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		586034B03288EDC720D50088 /* Build configuration list for PBXProject "NasaAPOP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58603F851238AB7BE589AA01 /* Debug */,
+				58603AE47BCA63AF08F9C71B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58603CF90E8F38CD76805249 /* Build configuration list for PBXNativeTarget "NasaAPOPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5860326987A71AC33AF7BAA5 /* Debug */,
+				5860334A61A099723AE3425D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		58603EE5A2313CD275E7E915 /* Build configuration list for PBXNativeTarget "NasaAPOPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				586037BE91FB9EE9851DA656 /* Debug */,
+				58603C3D7CFC31EA44731589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5860334C43D33154D78ED631 /* Project object */;
+}
