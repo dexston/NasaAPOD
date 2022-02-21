@@ -8,11 +8,11 @@ class ViewModel: ObservableObject {
 
     @Published var photo: Photo?
 
-    private var networkManager = NetworkManager()
+    private let networkManager = NetworkManager()
 
     func fetchAPOD() {
-        networkManager.fetchData { photo in
-            self.photo = photo
+        networkManager.fetchData { [weak self] photo in
+            self?.photo = photo
         }
     }
 

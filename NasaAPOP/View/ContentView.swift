@@ -23,6 +23,9 @@ struct ContentView: View {
                 Text(photo.explanation)
                 Text(photo.mediaType)
                 Text(photo.url)
+            } else {
+                ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
             }
         }
                 .padding()
