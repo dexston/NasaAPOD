@@ -13,16 +13,21 @@ struct ContentView: View {
     var networkManager = NetworkManager()
 
     @State var title = "empty"
-    @State var date = "empty"
+    @State var date = Date()
     @State var explanation = "empty"
-    @State var copyright = "empty"
+    @State var copyright: String?
     @State var url = "empty"
+    @State var mediaType = "empty"
 
     var body: some View {
         VStack{
             Text(title)
+            Text("\(date)")
+            if let copyright = copyright {
+                Text(copyright)
+            }
             Text(explanation)
-            Text(date)
+            Text(mediaType)
             Text(url)
         }
                 .padding()
@@ -31,8 +36,9 @@ struct ContentView: View {
                         title = photo.title
                         date = photo.date
                         explanation = photo.explanation
-                        //copyright = photo.copyright
+                        copyright = photo.copyright
                         url = photo.url
+                        mediaType = photo.mediaType
                     }
                 }
     }
