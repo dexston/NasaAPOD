@@ -15,7 +15,7 @@ struct ContentView: View {
     @State var title = "empty"
     @State var date = Date()
     @State var explanation = "empty"
-    @State var copyright = "empty"
+    @State var copyright = "No copyright"
     @State var url = "empty"
     @State var mediaType = "empty"
 
@@ -23,6 +23,7 @@ struct ContentView: View {
         VStack{
             Text(title)
             Text("\(date)")
+            Text(copyright)
             Text(explanation)
             Text(mediaType)
             Text(url)
@@ -33,7 +34,9 @@ struct ContentView: View {
                         title = photo.title
                         date = photo.date
                         explanation = photo.explanation
-                        //copyright = photo.copyright
+                        if let copyright = photo.copyright {
+                            self.copyright = copyright
+                        }
                         url = photo.url
                         mediaType = photo.mediaType
                     }
