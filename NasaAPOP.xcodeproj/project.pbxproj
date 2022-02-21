@@ -12,6 +12,7 @@
 		586034DF1BB57954F60E54CE /* NasaAPOPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586030E93D11B2634718532E /* NasaAPOPApp.swift */; };
 		586037F6B064EB3C782EAB6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58603111EB2FC0181E557833 /* Preview Assets.xcassets */; };
 		586039D56E1BF9F88FD47615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5860312B8D415ABFF992F63E /* Assets.xcassets */; };
+		58603ACA27A16E419F8F7C31 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603D9C0CAB26E8DF466070 /* ViewModel.swift */; };
 		58603B65C13739C4ACD366F8 /* NasaAPOPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603E0806CA8BEEF26A2A92 /* NasaAPOPUITests.swift */; };
 		58603DB975973EC382116B99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586034E54022E20426E58E4A /* ContentView.swift */; };
 		58603E8238927E00B06725A3 /* NasaAPOPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603DAFAE4B15B57E8955C8 /* NasaAPOPTests.swift */; };
@@ -44,6 +45,7 @@
 		5860389B330BEA586EDA6C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		5860396B013F81E1135D1116 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		58603A94DF377BAF15E21489 /* NasaAPOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NasaAPOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58603D9C0CAB26E8DF466070 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		58603DAFAE4B15B57E8955C8 /* NasaAPOPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPOPTests.swift; sourceTree = "<group>"; };
 		58603E0806CA8BEEF26A2A92 /* NasaAPOPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaAPOPUITests.swift; sourceTree = "<group>"; };
 		58603E647A7EB0EBB9F5CA80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				5860396B013F81E1135D1116 /* DataModel.swift */,
 				58603458AADABCD557CA30E8 /* NetworkManager.swift */,
+				58603D9C0CAB26E8DF466070 /* ViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				58603DB975973EC382116B99 /* ContentView.swift in Sources */,
 				586030117DA6EA0986D0107B /* DataModel.swift in Sources */,
 				5860339199C80897A81DB52B /* NetworkManager.swift in Sources */,
+				58603ACA27A16E419F8F7C31 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

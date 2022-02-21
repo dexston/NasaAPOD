@@ -10,36 +10,27 @@ import SwiftUI
 
 struct ContentView: View {
 
-    var networkManager = NetworkManager()
-
-    @State var title = "empty"
-    @State var date = Date()
-    @State var explanation = "empty"
-    @State var copyright: String?
-    @State var url = "empty"
-    @State var mediaType = "empty"
+    @StateObject var viewModel = ViewModel()
 
     var body: some View {
         VStack{
-            Text(title)
-            Text("\(date)")
-            if let copyright = copyright {
-                Text(copyright)
+            if let photo = viewModel.photo {
+                Text(photo.title)
+                Text("\(photo.date)")
+                if let copyright = photo.copyright {
+                    Text(copyright)
+                }
+                Text(photo.explanation)
+                Text(photo.mediaType)
+                Text(photo.url)
+            } else {
+                ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
             }
-            Text(explanation)
-            Text(mediaType)
-            Text(url)
         }
                 .padding()
                 .onAppear{
-                    networkManager.fetchData { photo in
-                        title = photo.title
-                        date = photo.date
-                        explanation = photo.explanation
-                        copyright = photo.copyright
-                        url = photo.url
-                        mediaType = photo.mediaType
-                    }
+                    viewModel.fetchAPOD()
                 }
     }
 }
