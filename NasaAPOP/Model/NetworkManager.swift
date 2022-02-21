@@ -15,10 +15,6 @@ class NetworkManager {
             let task: URLSessionDataTask = session.dataTask(with: url) { data, response, error in
                 if error == nil {
                     let decoder = JSONDecoder()
-                    decoder.keyDecodingStrategy = .convertFromSnakeCase
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "yyyy-mm-dd"
-                    decoder.dateDecodingStrategy = .formatted(dateFormatter)
                     if let data = data {
                         do {
                             let result = try decoder.decode(Photo.self, from: data)

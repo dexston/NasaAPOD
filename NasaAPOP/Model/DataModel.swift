@@ -6,10 +6,9 @@ import Foundation
 
 struct Photo: Decodable {
     var copyright: String?
-    var date: Date
+    var date: String
     var explanation: String
     var hdurl: String
     var title: String
     var url: String
-    var mediaType: String
 }
