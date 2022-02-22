@@ -36,7 +36,9 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .font(.title)
                             .onTapGesture {
-                                viewModel.showExplanation = !viewModel.showExplanation
+                                withAnimation {
+                                    viewModel.showExplanation.toggle()
+                                }
                             }
                     if viewModel.showExplanation {
                         Text(photo.explanation)
@@ -46,6 +48,7 @@ struct ContentView: View {
                                 .foregroundColor(.white)
                                 .font(.body)
                                 .multilineTextAlignment(.center)
+                                .transition(.move(edge: .bottom))
                     }
                     if let copyright = photo.copyright {
                         Text("Copyright: \(copyright)")
