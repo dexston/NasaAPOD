@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class NetworkManager {
@@ -11,7 +12,7 @@ class NetworkManager {
 
     func fetchData(completion: @escaping (Photo) -> Void) {
         if let url = URL(string: url) {
-            let session = URLSession(configuration: .default)
+            let session = URLSession.shared
             let task: URLSessionDataTask = session.dataTask(with: url) { data, response, error in
                 if error == nil {
                     let decoder = JSONDecoder()
@@ -28,6 +29,22 @@ class NetworkManager {
                         } catch {
                             print(error)
                         }
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
+
+    func fetchImage(from url: String, completion: @escaping (UIImage) -> Void) {
+        if let url = URL(string: url) {
+            let session = URLSession.shared
+            let task = session.dataTask(with: url) { data, response, error in
+                if error == nil,
+                   let data = data,
+                   let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        completion(image)
                     }
                 }
             }
