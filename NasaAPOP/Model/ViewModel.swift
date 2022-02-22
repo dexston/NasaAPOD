@@ -9,6 +9,7 @@ class ViewModel: ObservableObject {
 
     @Published var photo: Photo?
     @Published var image: UIImage?
+    @Published var showExplanation = false
 
     private let networkManager = NetworkManager()
 
@@ -20,19 +21,4 @@ class ViewModel: ObservableObject {
             }
         }
     }
-
-    func fetchImage() {
-        guard let photo = photo else { return }
-        networkManager.fetchImage(from: photo.url) { [weak self] image in
-            self?.image = image
-        }
-    }
-
-    func getDate(from date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        return formatter.string(from: date)
-    }
-
-
 }
