@@ -5,11 +5,11 @@
 import Foundation
 
 struct Photo: Decodable {
-    var copyright: String?
-    var date: Date
-    var explanation: String
-    var hdurl: String
-    var title: String
-    var url: String
-    var mediaType: String
+    var copyright: String? = nil
+    var date: Date = Date()
+    var explanation: String = ""
+    var hdurl: String? = nil
+    var title: String = "No photo for that date"
+    var url: String = ""
+    var mediaType: String = ""
 }

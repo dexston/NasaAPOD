@@ -8,18 +8,21 @@ import UIKit
 
 class NetworkManager {
 
-    private let url = "https://api.nasa.gov/planetary/apod?api_key=KhsyxIkSJ1yc5HGlhFxLoYRUeoc4j2u3s5KRiylg"
+    private let dateFormatter = DateFormatter()
 
-    func fetchData(completion: @escaping (Photo) -> Void) {
-        guard let url = URL(string: url) else { return }
+    private let url = "https://api.nasa.gov/planetary/apod?api_key=KhsyxIkSJ1yc5HGlhFxLoYRUeoc4j2u3s5KRiylg&date="
+
+    func fetchData(for date: Date, completion: @escaping (Photo) -> Void) {
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let urlWithDate = url + dateFormatter.string(from: date)
+        guard let url = URL(string: urlWithDate) else { return }
         let session = URLSession.shared
-        let task = session.dataTask(with: url) { data, response, error in
+        let task = session.dataTask(with: url) { [weak self] data, response, error in
             if error == nil,
             let data = data {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-mm-dd"
+                guard let dateFormatter = self?.dateFormatter else { fatalError() }
                 decoder.dateDecodingStrategy = .formatted(dateFormatter)
                 do {
                     let result = try decoder.decode(Photo.self, from: data)
@@ -27,7 +30,9 @@ class NetworkManager {
                         completion(result)
                     }
                 } catch {
-                    print(error)
+                    DispatchQueue.main.async {
+                        completion(Photo())
+                    }
                 }
             }
         }
