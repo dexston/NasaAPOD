@@ -17,13 +17,15 @@ struct ContentView: View {
         ZStack {
             if let photo = viewModel.photo,
                let image = viewModel.image {
-                if photo.mediaType == "image" {
+                if photo.mediaType == .image {
                     Image(uiImage: image)
                             .resizable()
                             .aspectRatio(contentMode: .fill)
                             .edgesIgnoringSafeArea(.all)
-                } else if photo.mediaType == "video" {
+                } else if photo.mediaType == .video {
                     Text("Video content not supported yet")
+                } else if let msg = photo.msg {
+                    Text(msg)
                 }
                 VStack {
                     Text(viewModel.date, style: .date)
@@ -38,7 +40,7 @@ struct ContentView: View {
                                 }
                             }
                     if viewModel.showDatePicker {
-                        DatePicker("", selection: $viewModel.date, in: viewModel.dateRange, displayedComponents: [.date])
+                        DatePicker("Date picker", selection: $viewModel.date, in: viewModel.dateRange, displayedComponents: [.date])
                                 .datePickerStyle(GraphicalDatePickerStyle())
                                 .padding(10)
                                 .background(RoundedRectangle(cornerRadius: 10)
@@ -46,22 +48,25 @@ struct ContentView: View {
                                 .colorScheme(.dark)
                                 .font(.body)
                                 .transition(.move(edge: .top))
+                                .labelsHidden()
                     }
                     Spacer()
-                    Text(photo.title)
-                            .padding(10)
-                            .background(RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color.black.opacity(0.3)))
-                            .foregroundColor(.white)
-                            .font(.title)
-                            .onTapGesture {
-                                withAnimation {
-                                    viewModel.showExplanation.toggle()
+                    if let title = photo.title {
+                        Text(title)
+                                .padding(10)
+                                .background(RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color.black.opacity(0.3)))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .onTapGesture {
+                                    withAnimation {
+                                        viewModel.showExplanation.toggle()
+                                    }
                                 }
-                            }
+                    }
                     if viewModel.showExplanation,
-                        photo.explanation != "" {
-                        Text(photo.explanation)
+                       let explanation = photo.explanation {
+                        Text(explanation)
                                 .padding(10)
                                 .background(RoundedRectangle(cornerRadius: 10)
                                         .fill(Color.black.opacity(0.3)))

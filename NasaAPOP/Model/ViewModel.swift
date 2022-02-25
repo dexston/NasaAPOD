@@ -17,12 +17,13 @@ class ViewModel: ObservableObject {
     @Published var showExplanation = false
     @Published var showDatePicker = false
 
-    let dateRange: ClosedRange<Date> = {
+    // The first APOD is dated 16.06.1995
+    // https://github.com/nasa/apod-api#url-search-params--query-string-parameters
+    var dateRange: ClosedRange<Date> {
         let calendar = Calendar.current
         let startComponents = DateComponents(year: 1995, month: 6, day: 16)
         return calendar.date(from: startComponents)! ... Date()
-    }()
-
+    }
 
     private let networkManager = NetworkManager()
 
