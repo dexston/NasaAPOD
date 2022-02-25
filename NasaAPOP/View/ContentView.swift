@@ -13,23 +13,60 @@ struct ContentView: View {
     @StateObject var viewModel = ViewModel()
 
     var body: some View {
-        VStack{
-            if let photo = viewModel.photo {
-                Text(photo.title)
-                Text("\(photo.date)")
-                if let copyright = photo.copyright {
-                    Text(copyright)
+
+        ZStack {
+            if let photo = viewModel.photo,
+               let image = viewModel.image {
+                Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .edgesIgnoringSafeArea(.all)
+                VStack {
+                    Text(photo.date, style: .date)
+                            .padding(10)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.black.opacity(0.3)))
+                            .foregroundColor(.white)
+                            .font(.body)
+                    Spacer()
+                    Text(photo.title)
+                            .padding(10)
+                            .background(RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.black.opacity(0.3)))
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .onTapGesture {
+                                withAnimation {
+                                    viewModel.showExplanation.toggle()
+                                }
+                            }
+                    if viewModel.showExplanation {
+                        Text(photo.explanation)
+                                .padding(10)
+                                .background(RoundedRectangle(cornerRadius: 10)
+                                        .fill(Color.black.opacity(0.3)))
+                                .foregroundColor(.white)
+                                .font(.body)
+                                .multilineTextAlignment(.center)
+                                .transition(.move(edge: .bottom))
+                    }
+                    if let copyright = photo.copyright {
+                        Text("Copyright: \(copyright)")
+                                .font(.caption)
+                                .padding(5)
+                                .background(RoundedRectangle(cornerRadius: 5)
+                                        .fill(Color.black.opacity(0.3)))
+                                .foregroundColor(.white)
+                                .cornerRadius(5)
+                    }
                 }
-                Text(photo.explanation)
-                Text(photo.mediaType)
-                Text(photo.url)
+                        .frame(width: UIScreen.main.bounds.width * 0.9)
             } else {
                 ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
             }
         }
-                .padding()
-                .onAppear{
+                .onAppear {
                     viewModel.fetchAPOD()
                 }
     }
