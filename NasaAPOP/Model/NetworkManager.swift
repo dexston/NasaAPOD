@@ -14,11 +14,24 @@ class NetworkManager {
         return formatter
     }()
 
-    private let url = "https://api.nasa.gov/planetary/apod?api_key=KhsyxIkSJ1yc5HGlhFxLoYRUeoc4j2u3s5KRiylg&date="
+    private let apiKey = "KhsyxIkSJ1yc5HGlhFxLoYRUeoc4j2u3s5KRiylg"
+
+    private func makeURL(for date: Date) -> URL? {
+        guard
+            let baseURL = URL(string: "https://api.nasa.gov/planetary/apod"),
+            var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
+        else { return nil }
+        urlComponents.queryItems = [
+            URLQueryItem(name: "api_key", value: apiKey),
+            URLQueryItem(name: "date", value: dateFormatter.string(from: date))
+        ]
+        return urlComponents.url
+    }
 
     func fetchData(for date: Date) async -> Photo? {
-        let urlWithDate = url + dateFormatter.string(from: date)
-        guard let url = URL(string: urlWithDate) else { fatalError() }
+        guard let url = makeURL(for: date) else {
+            return nil
+        }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         decoder.dateDecodingStrategy = .formatted(dateFormatter)
@@ -41,4 +54,5 @@ class NetworkManager {
         }
     }
 }
+
 
