@@ -15,13 +15,17 @@ struct ContentView: View {
     var body: some View {
 
         ZStack {
-            if let photo = viewModel.photo,
-               let image = viewModel.image {
+            if let photo = viewModel.photo {
                 if photo.mediaType == .image {
-                    Image(uiImage: image)
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .edgesIgnoringSafeArea(.all)
+                    if let image = viewModel.image {
+                        Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .edgesIgnoringSafeArea(.all)
+                    } else {
+                        ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle())
+                    }
                 } else if photo.mediaType == .video {
                     Text("Video content not supported yet")
                 } else if let msg = photo.msg {
@@ -91,9 +95,10 @@ struct ContentView: View {
                         .progressViewStyle(CircularProgressViewStyle())
             }
         }
-                .onAppear {
-                    viewModel.fetchAPOD()
+                .task {
+                    await viewModel.fetchAPOD()
                 }
+
     }
 }
 
