@@ -6,14 +6,11 @@ import Foundation
 import UIKit
 
 @MainActor
-
 class ViewModel: ObservableObject {
 
     @Published var date = Date() {
-        willSet {
-            image = nil
-        }
         didSet {
+            image = nil
             Task {
                 await fetchAPOD()
             }
