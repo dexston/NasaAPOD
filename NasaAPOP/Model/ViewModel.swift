@@ -5,11 +5,15 @@
 import Foundation
 import UIKit
 
+@MainActor
 class ViewModel: ObservableObject {
 
     @Published var date = Date() {
         didSet {
-            fetchAPOD()
+            image = nil
+            Task {
+                await fetchAPOD()
+            }
         }
     }
     @Published var photo: Photo?
@@ -27,12 +31,10 @@ class ViewModel: ObservableObject {
 
     private let networkManager = NetworkManager()
 
-    func fetchAPOD() {
-        networkManager.fetchData(for: date) { [weak self] photo in
-            self?.photo = photo
-            self?.networkManager.fetchImage(from: photo.url) { [weak self] image in
-                self?.image = image
-            }
+    func fetchAPOD() async {
+        photo = await networkManager.fetchData(for: date)
+        if let url = photo?.url {
+            image = await networkManager.fetchImage(from: url)
         }
     }
 }

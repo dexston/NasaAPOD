@@ -14,45 +14,45 @@ class NetworkManager {
         return formatter
     }()
 
-    private let url = "https://api.nasa.gov/planetary/apod?api_key=KhsyxIkSJ1yc5HGlhFxLoYRUeoc4j2u3s5KRiylg&date="
+    private let apiKey = "KhsyxIkSJ1yc5HGlhFxLoYRUeoc4j2u3s5KRiylg"
 
-    func fetchData(for date: Date, completion: @escaping (Photo) -> Void) {
-        let urlWithDate = url + dateFormatter.string(from: date)
-        guard let url = URL(string: urlWithDate) else { return }
-        let session = URLSession.shared
-        let task = session.dataTask(with: url) { [weak self] data, response, error in
-            if error == nil,
-            let data = data {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                guard let dateFormatter = self?.dateFormatter else { fatalError() }
-                decoder.dateDecodingStrategy = .formatted(dateFormatter)
-                do {
-                    let result = try decoder.decode(Photo.self, from: data)
-                    DispatchQueue.main.async {
-                        completion(result)
-                    }
-                } catch {
-                    print(error)
-                }
-            }
-        }
-        task.resume()
+    private func makeURL(for date: Date) -> URL? {
+        guard
+            let baseURL = URL(string: "https://api.nasa.gov/planetary/apod"),
+            var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
+        else { return nil }
+        urlComponents.queryItems = [
+            URLQueryItem(name: "api_key", value: apiKey),
+            URLQueryItem(name: "date", value: dateFormatter.string(from: date))
+        ]
+        return urlComponents.url
     }
 
-    func fetchImage(from url: URL?, completion: @escaping (UIImage) -> Void) {
-        guard let url = url else { return }
-        let session = URLSession.shared
-        let task = session.dataTask(with: url) { data, response, error in
-            if error == nil,
-               let data = data,
-               let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    completion(image)
-                }
-            }
+    func fetchData(for date: Date) async -> Photo? {
+        guard let url = makeURL(for: date) else {
+            return nil
         }
-        task.resume()
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            return try decoder.decode(Photo.self, from: data)
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+
+    func fetchImage(from url: URL) async -> UIImage? {
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            return UIImage(data: data)
+        } catch {
+            print(error)
+            return nil
+        }
     }
 }
+
 
