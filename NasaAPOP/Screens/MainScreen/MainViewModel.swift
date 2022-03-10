@@ -6,7 +6,7 @@ import Foundation
 import UIKit
 
 @MainActor
-class ViewModel: ObservableObject {
+class MainViewModel: ObservableObject {
 
     @Published var date = Date() {
         didSet {
