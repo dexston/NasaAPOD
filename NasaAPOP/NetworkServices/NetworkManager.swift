@@ -5,7 +5,6 @@
 import Foundation
 import UIKit
 
-
 class NetworkManager {
 
     private let dateFormatter: DateFormatter = {
@@ -29,9 +28,7 @@ class NetworkManager {
     }
 
     func fetchData(for date: Date) async -> Photo? {
-        guard let url = makeURL(for: date) else {
-            return nil
-        }
+        guard let url = makeURL(for: date) else { return nil }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         decoder.dateDecodingStrategy = .formatted(dateFormatter)
@@ -54,5 +51,3 @@ class NetworkManager {
         }
     }
 }
-
-

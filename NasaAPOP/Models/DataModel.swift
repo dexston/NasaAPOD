@@ -16,6 +16,6 @@ struct Photo: Decodable {
 }
 
 enum MediaType: String, Decodable {
-    case image = "image"
-    case video = "video"
+    case image
+    case video
 }
