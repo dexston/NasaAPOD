@@ -3,11 +3,14 @@
 
 ## Nasa Astronomy Picture of the Day
 
-![Swift](https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white)
+### Приложение для просмотра ежедневных астрономических фотография NASA
+---
+Язык: Swift  
+UI: SwiftUI  
+Архитектура: MVVM  
+Зависимости: отсутствуют  
 
-A simple app for viewing astronomy pictures from NASA
+---
 
-## Features
-
-- Select pictures by date
-- Read description for each picture
+Простенький пет-проект  
+В приложении можно выбрать любую дату, и фото с описанием будет отображено на экране
